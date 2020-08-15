@@ -1,0 +1,230 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image: url(https://thedesignest.net/wp-content/uploads/2019/06/Light-Brown-Wooden-Texture.jpg);
+}
+
+.gridwrapper{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 0.5fr;
+    grid-template-areas:
+        "background-left header      header       background-right"
+        "background-left whatwedo description  background-right"
+        "background-left footer      footer       background-right";
+}
+.description-box {
+    grid-area: description;
+    background: white;
+    display: block;
+}
+.description h3{
+    margin-left: 0.6vw;
+    font-weight: 100;
+}
+
+.description{
+    text-align: left;
+    margin: 0;
+}
+.images{
+    border: 10px solid transparent;
+    
+}
+.Box1 img{
+    height: 10em;
+    width: 20em;
+    border-style: double;
+    border-color: black;
+    position: relative;
+    
+}
+.Box2 img{
+    height: 10em;
+    width: 20em;
+    border-style: double;
+    border-color: black;
+}
+
+
+
+
+
+
+
+
+.header{
+    grid-area: header;
+    background-color: white;
+    margin-bottom: 0em;
+}
+.image-header img{
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+.topnav{
+    border-top: 2px solid black;
+    padding-bottom: 0px;
+    height: fit-content;
+    border-bottom: 2px solid black;
+    display: inline-block;
+    width: 98%;
+    text-align: center;
+    margin-left: 1vw;
+}
+.topnav ul{
+    list-style-type: none;
+    margin-top: 0;
+    text-align: center;
+    display: inline; 
+}
+.topnav li{
+    display: inline-block;
+    float: left;
+    margin-right: 4%;
+    margin-left: 0.1;
+    padding-right: 3.5%;
+    padding-left: 2%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-right: 1px solid grey;
+}
+#contactus{
+    border-right: 0px solid grey;
+    margin-left: 2%;
+}
+.topnav a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.whatwedo{
+    grid-area: whatwedo;
+    background-color: white;
+    margin-top: 0em;
+}
+.background-left{
+    grid-area: backgroud-left;
+}
+.background-right{
+    grid-area: background-right;
+}
+.footer{
+    grid-area: footer;
+    border-top: 2px solid black;
+    background-color: white;
+}
+.footnav ul{
+    float: none;
+    margin-bottom: 0.5vh;
+}
+.footnav a{
+    color: inherit;
+    text-decoration: none;
+}
+.footnav{
+    float: none;
+    text-align: center;
+}
+.footnav ul li{
+    float: none;
+    display: inline;
+    
+}
+.copyright{
+    color: grey;
+    font-size: 0.75em;
+    margin-top: 0px;
+}
+
+.box{
+    background-color:#800000;
+    height: 90%;
+    width: 90%;
+    color: white;
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+.box-title{
+    margin-left: 5%;
+    padding-top: 7%;
+}
+
+.line{
+    border: 1px solid white;
+    margin-left: 5%;
+    margin-right: 20%;
+}
+.services{
+    margin-left: 7%;
+    font-size: 0.8em;
+}
+.box-image{
+    margin-bottom: 0;
+}
+.attorneys{
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.meet{
+    margin-top: 0;
+}
+
+.list-head{
+    margin-bottom: 1px;
+}
+.sub-list{
+    display:block;
+    margin-left:5%;
+    margin-top: 1px;
+    margin-bottom:1px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Nebras Start CSS Section */
+.description{
+    grid-area: description;
+    background-color: white;
+}

@@ -1,0 +1,6 @@
+nza_env
+.env
+__pycache__
+NZA_CS_env
+nzalawenv
+app.db

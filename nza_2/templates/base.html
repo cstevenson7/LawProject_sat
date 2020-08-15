@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" defer></script> 
+<title>NZA Law Firm</title>
+    
+</head>
+<body>
+    <!--Navbar-->
+    <div class="grid-wrapper">
+        <!--Logo and Header Content-->
+        <div class="logo">
+        </div>
+        <div class="header">
+             <div class="image-header">
+              <img src="https://via.placeholder.com/400x125" alt="placeholer heading">
+            </div>
+            <div class="topnav">
+                <ul>
+                    <li><a href="./who-we-are.html">WHO WE ARE</a></li>
+                    <li><a href="./what-we-do.html">WHAT WE DO</a></li>
+                    <li><a href="{{ url_for('register') }}">REGISTER</a></li>
+                    <li><a href="{{ url_for('login') }}">LOG IN</a></li>
+                    <li id="contactus"><a href="{{ url_for('createnote') }}">CREATE NOTE</a></li>
+                    <li id="contactus"><a href="{{ url_for('note_display') }}">DISPLAY NOTES</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        {% block content %}
+        <div class="cn">
+            <!--Central Home Image and Text-->
+            <img class="home-image" src="https://via.placeholder.com/700x450" alt="Placeholder for Home Image">
+            <p class="bold cn-text-header">Welcome to our website!</p>
+            <p class="cn-text">Nielsen, Zehe & Antas, PC is a nationally recognized and respected law firm that offers its clients
+            bit girm experience and talent in a smaller firm environment. Our reputation is very important to
+            us. We solve our client's problems in some situations and prevent them all together in other
+            situations. We welcome you to our website to learn more about us.</p>
+        </div>
+
+        <div class="side">
+        <!--Side Scrollbar and Text-->
+            <div class="scrollbar">
+                <p class="bold">NEWS FEED</p>
+                <hr>
+                <p>In a 1983/Title IX claim brought against an Illinois school district and its
+                    administrators, Robert Lentz was able to obtain a Motion to Dismiss with prejudice from
+                    the Fed Dist Court of Illinois. <br>
+                    <br>
+                    Nielsen, Zehe & Antas. P.C. is pleased to announce that Vaughn A. Drozd has joined the Firm 
+                    Associate Attorney. <br>
+                    <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor aut officiis sit 
+                    dolore. Illo officiis eaque labore officia eos, adipisci ex dicta error iure facilis recusandae, est, 
+                    modi quod! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, nobis! Consequatur veritatis 
+                    accusamus eius laborum dignissimos sunt architecto corporis qui modi, quas laboriosam aut quasi animi 
+                    ducimus error quae facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, commodi. 
+                    Enim, unde nisi corporis, officiis nobis consequuntur velit eius repellat cupiditate est numquam molestias 
+                    minus expedita voluptatibus possimus magnam libero.
+                </p>
+            </div>
+
+            <div>
+                <p class="contact-info">
+                    <span class="bold">Nielsen, Zehe & Antas, P.C.</span> <br>
+                    55 West Monroe Street, Suite 1800 <br>
+                    Chicago, Illinois 60603 <br>
+                    312-322-9900 phone <br>
+                    312-322-9977 fax <br>
+                    <a class="contact-email" href="ENielsen@nzalaw.com">ENielsen@nzalaw.com</a>
+                </p>
+            </div>
+        </div>
+        {% endblock content %}   
+
+        <!--Container for the Footer-->
+        <div class="footer">
+            <div class="footnav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>-</li>
+                    <li><a href="who-we-are.html">WHO WE ARE</a></li>
+                    <li>-</li>
+                    <li><a href="what-we-do.html">WHAT WE DO</a></li>
+                    <li>-</li>
+                    <li><a href="#">NEWS & EVENTS</a></li>
+                    <li>-</li>
+                    <li><a href="#">WHERE WE WORK</a></li>
+                    <li>-</li>
+                    <li><a href="#">CONTACT></a>
+                </ul>
+                <p class="copyright">&copy;2009 Nielsen, Zehe & Antas, P.C. // Website Design by CodingTemple July Cohort 2020</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3>Hello {{current_user.username }}</h3>
+
+<!--#to see all posts on home page, showis diff  info depending on if you are logged in or not-->
+{% if current_user.is_authenticated %}
+    {% for note in notes %}
+        <div class='container'>
+            <h3>
+                <a href="{{ url_for('note_detail', note_id = note.id) }}">{{ note.case }} </a>
+            </h3>
+            <p>{{ note.case_note }} </p>   
+        </div>
+
+    {% endfor %}
+{% else %}
+{% endif %}
+
+{% endblock content %}
