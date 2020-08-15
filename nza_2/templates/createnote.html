@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="create_note">
-    <form action="" method="POST">
-        {{ form.hidden_tag() }}
-        <h1 style = "margin-left: 3vh;">Create Case Notes </h1>
-        <div class ="form-group">
+
+<div class="container_note">
+    <h1 style="margin-left:3vw;">Create Case Notes </h1>
+    <form style="margin-left:3vw;" action="" method="POST">  
+        <div>
+            {{ form.hidden_tag() }}
             <fieldset>
                 {{ form.case.label }}
                 {{ form.case(class="form-control", placeholder="Case:") }}
             </fieldset>
-
             <fieldset>
                 {{ form.case_note.label }}
                 {{ form.case_note(class="form-control", placeholder="Case Notes") }}
             </fieldset>
             <br>
             {{ form.submit(class= "btn btn-success") }}
+
+        </div>
     </form>
 </div>
-<div class="side_create_note">
 
+<div class="side_note">
 </div>
 
 {% endblock content %}

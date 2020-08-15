@@ -74,7 +74,7 @@ def register():
         #mail.send(msg)
     return render_template("register.html", form=form)
 
-# Nibras Work below (Update + Delete) **********chnage decotator id
+# Nibras Work below (Update + Delete)
 @app.route('/notes/update/<int:note_id>', methods=['GET', 'POST'])
 @login_required
 def note_update(note_id):

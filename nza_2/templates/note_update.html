@@ -2,22 +2,28 @@
 
 {% block content %}
 
-<div class="container">
-    <h2>Please go ahead and update your notes</h2>
-    <form action="" method="POST">
-        {{ update_form.hidden_tag() }}
-        <div class="form-group">
-            <fieldset>
-                {{ update_form.case.label }}
-                {{ update_form.case(class="form-control", placeholder="Update Case") }}
-            </fieldset>
-            <fieldset>
-                {{ update_form.case_note.label }}
-                {{ update_form.case_note(class="form-control", placeholder="Update Case Notes") }}
-            </fieldset>
-            {{ update_form.submit(class="btn btn-primary") }}
-        </div>
-    </form>
+<div class="update">
+    <div class="container">
+        <h2 style="margin-left:3vw;">Please go ahead and update your notes</h2>
+        <form  style="margin-left:3vw;" action="" method="POST">            
+            <div>
+                {{ update_form.hidden_tag() }}
+                <fieldset>
+                    {{ update_form.case.label }}
+                    {{ update_form.case(class="form-control", placeholder="Update Case") }}
+                </fieldset>
+                <fieldset>
+                    {{ update_form.case_note.label }}
+                    {{ update_form.case_note(class="form-control", placeholder="Update Case Notes") }}
+                </fieldset>
+                <br>
+                {{ update_form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="side_update">
 </div>
 
 {% endblock content %}

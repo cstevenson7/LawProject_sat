@@ -149,14 +149,12 @@ body {
     margin-left: 1vw;
 }
 .topnav ul{
-    list-style-type: none;
-    margin-top: 0;
+    list-style-type: none;   
     text-align: center;
     display: inline; 
 }
 .topnav li{
-    display: inline-block;
-    float: left;
+    display: inline-block;    
     margin-right: 4%;
     margin-left: 0.1;
     padding-right: 3.5%;
@@ -178,7 +176,8 @@ body {
 
 .container_login{
    grid-area:cn;
-   margin: auto;
+   margin:auto;
+   left: 3vw;
    background-color: white;
    height:100%;
    width:100%;
@@ -187,12 +186,101 @@ body {
 
 .side_login{
     grid-area:side;
-    margin: auto;
+    margin: auto;    
     background-color: white;
     height:100%;
     width:100%;
 }
 
-.create_note{
-    
+.container_note{
+    grid-area:cn;
+    margin:auto;
+    left: 3vw;
+    background-color: white;
+    height:100%;
+    width:100%;
+ 
 }
+
+.side_note{
+    grid-area:side;
+    margin: auto;       
+    background-color: white;
+    height:100%;
+    width:100%;
+}
+
+.container_register{
+    grid-area:cn;
+    margin:auto;
+    left: 3vw;
+    background-color: white;
+    height:100%;
+    width:100%;
+ 
+}
+
+.side_register{
+    grid-area:side;
+    margin: auto;       
+    background-color: white;
+    height:100%;
+    width:100%;
+}
+
+.container_display{
+    grid-area:cn;
+    margin:auto;
+    left: 3vw;
+    background-color: white;
+    height:100%;
+    width:100%;
+ 
+}
+
+.side_display{
+    grid-area:side;
+    margin: auto;       
+    background-color: white;
+    height:100%;
+    width:100%;
+}
+
+.details{
+    grid-area:cn;
+    margin:auto;
+    left: 3vw;
+    background-color: white;
+    height:100%;
+    width:100%;
+ 
+}
+
+.side_details{
+    grid-area:side;
+    margin: auto;       
+    background-color: white;
+    height:100%;
+    width:100%;
+}
+
+.update{
+    grid-area:cn;
+    margin:auto;
+    left: 3vw;
+    background-color: white;
+    height:100%;
+    width:100%;
+ 
+}
+
+.side_update{
+    grid-area:side;
+    margin: auto;       
+    background-color: white;
+    height:100%;
+    width:100%;
+}
+
+
+

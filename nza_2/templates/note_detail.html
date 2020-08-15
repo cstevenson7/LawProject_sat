@@ -2,46 +2,49 @@
 
 {% block content %}
 
-<!-- CSS is not pulling 404 error in terminal-->
-<div class="container">
-    <h1>These case notes belong to to : {{ note.author.username }}</h1>  <!--can get username because of the backreference we set up-->   
-    <hr>
-    <h3>Case:</h3>
-    <p>{{ note.case }}</p>
+<div class="details">
+    <div class="container">
+        <h5>These case notes belong to to : {{ note.author.username }}</h5>  <!--can get username because of the backreference we set up-->   
+        <hr>
+        <h4>Case:</h4>
+        <p>{{ note.case }}</p>
 
-    <h3>Content: </h3>
-    <p>{{ note.case_note }}</p>
-    <br>
-    <blockquote>Date Created: {{ note.date_created }} </blockquote>
+        <h4>Content: </h4>
+        <p>{{ note.case_note }}</p>
+        <br>
+        <blockquote>Date Created: {{ note.date_created }} </blockquote>
 
-    <!--UPDATE BUTTON-->
-    <a href="{{url_for('note_update', note_id = note.id)}}"><button class="btn btn-primary">Update</button></a>
+        <!--UPDATE BUTTON-->
+        <a href="{{url_for('note_update', note_id = note.id)}}"><button class="btn btn-primary">Update</button></a>
 
-    <!--DELETE BUTTON is a modal -  from Bootstrap  hashtag# is an ID-->
-    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#dangerModal">Delete Case Notes</button>
+        <!--DELETE BUTTON is a modal -  from Bootstrap  hashtag# is an ID-->
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#dangerModal">Delete Case Notes</button>
 
-    <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="dangerModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="dangerModalLabel">Delete Post - Are You Sure?</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              This action can't be reversed. Are you sure you want to delete?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <form action="{{ url_for('note_delete', note_id = note.id ) }}" method="post">
-                  <input type="submit" value="Delete?" class="btn btn-danger">
-              </form>
+        <div class="modal fade" id="dangerModal" tabindex="-1" role="dialog" aria-labelledby="dangerModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="dangerModalLabel">Delete Post - Are You Sure?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  This action can't be reversed. Are you sure you want to delete?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <form action="{{ url_for('note_delete', note_id = note.id ) }}" method="post">
+                      <input type="submit" value="Delete?" class="btn btn-danger">
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+    </div>
+</div>
 
+<div class="side_details">
 </div>
 
 {% endblock content %}
