@@ -127,5 +127,5 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('notes'))
+    return redirect(url_for('home'))
 
