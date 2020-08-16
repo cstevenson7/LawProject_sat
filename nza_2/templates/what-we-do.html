@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/styles-whatewdo.css"">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="stylesheet" href="../static/css/whatwedo.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js" defer></script> 
     <title>What We Do</title>
 </head>
 <body>
@@ -13,15 +20,17 @@
 
         <div class="header">
             <div class="image-header">
-                <img src="https://via.placeholder.com/400x125" alt="placeholer heading">
+                <img src="../static/images/logo.png"  alt= "Company logo" width=300 height=65 >
             </div>
             <div class="topnav">
                 <ul>
-                    <li><a href="./who-we-are.html">WHO WE ARE</a></li>
-                    <li><a href="./what-we-do.html">WHAT WE DO</a></li>
-                    <li><a href="./createnote.html">ADD CASE NOTES</a></li>
-                    <li><a href="./notes.html">DISPLAY NOTES</a></li>
-                    <li><a href="./note_detail.html">CHANGE NOTES</a></li>
+                    <li><a href="{{ url_for('home') }}">HOME</a></li>
+                    <li><a href="{{ url_for('who_we_are') }}">WHO WE ARE</a></li>
+                    
+                    <li><a href="{{ url_for('register') }}">REGISTER</a></li>
+                    <li><a href="{{ url_for('login') }}">LOG IN</a></li>
+                    <li id="contactus"><a href="{{ url_for('createnote') }}">CREATE NOTE</a></li>
+                    <li id="contactus"><a href="{{ url_for('note_display') }}">DISPLAY NOTES</a></li>
                 </ul>
 
             </div>
@@ -57,22 +66,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!--Begin Nibras Section-->
         <div class="description-box">

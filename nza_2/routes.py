@@ -27,12 +27,7 @@ def note_display():
     notes = Note.query.all()
     return render_template("notes.html", notes=notes)
 
-# Cindy Work here (Retrieve route)
-@app.route('/notes/<int:note_id>')
-@login_required
-def note_detail(note_id):
-    note = Note.query.get_or_404(note_id)  # get_or404 throws and exception if your post_id does not exist, 404 is a clinet error
-    return render_template('note_detail.html',note=note)
+
 
 #Create a Note route
 @app.route('/createnote', methods=['GET','POST'])
@@ -74,8 +69,17 @@ def register():
         #mail.send(msg)
     return render_template("register.html", form=form)
 
+
+# Cindy Work here (Retrieve route)
+@app.route('/notes/<int:note_id>')
+@login_required
+def note_detail(note_id):
+    note = Note.query.get_or_404(note_id)  
+    return render_template('note_detail.html',note=note) 
+
+
 # Nibras Work below (Update + Delete)
-@app.route('/notes/update/<int:note_id>', methods=['GET', 'POST'])
+@app.route('/notes/note_update/<int:note_id>', methods=['GET', 'POST'])
 @login_required
 def note_update(note_id):
     note = Note.query.get_or_404(note_id)
@@ -85,7 +89,7 @@ def note_update(note_id):
         case = update_form.case.data
         case_notes = update_form.content.data
         user_id = current_user.id
-        # Update case with case notes info
+        # Update case with case notes infoK
         note.case = case
         note.case_notes = case_notes
         note.user_id = user_id
@@ -96,7 +100,7 @@ def note_update(note_id):
 
     return render_template('note_update.html', update_form=update_form)
 
- #-----change decorator
+
 @app.route('/notes/delete/<int:note_id>', methods=['POST'])
 @login_required
 def note_delete(note_id):
