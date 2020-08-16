@@ -74,28 +74,23 @@ body{
     width: 98%;
     text-align: center;
     margin-left: 1vw;
+    margin-top: 1vh;
 }
 .topnav ul{
-    list-style-type: none;
-    margin-top: 0;
+    list-style-type: none;   
     text-align: center;
     display: inline; 
 }
 .topnav li{
-    display: inline-block;
-    float: left;
-    margin-right: 4%;
-    margin-left: 0.1;
-    padding-right: 3.5%;
-    padding-left: 2%;
+    display: inline-block;    
+    margin-right: 1%;
+    padding-right: 2%;
+    padding-left: 1%;
     padding-top: 1vh;
     padding-bottom: 1vh;
     border-right: 1px solid grey;
 }
-#contactus{
-    border-right: 0px solid grey;
-    margin-left: 2%;
-}
+
 .topnav a{
     display: block;
     color: inherit;
