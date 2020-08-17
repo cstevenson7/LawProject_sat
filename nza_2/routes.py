@@ -79,19 +79,19 @@ def note_detail(note_id):
 
 
 # Nibras Work below (Update + Delete)
-@app.route('/notes/note_update/<int:note_id>', methods=['GET', 'POST'])
+@app.route('/notes/update/<int:note_id>', methods=['GET', 'POST'])
 @login_required
 def note_update(note_id):
     note = Note.query.get_or_404(note_id)
     update_form = NoteForm()
 
-    if request.method == 'NOTE' and update_form.validate():
+    if request.method == 'POST' and update_form.validate():
         case = update_form.case.data
-        case_notes = update_form.content.data
+        case_note = update_form.case_note.data
         user_id = current_user.id
         # Update case with case notes infoK
         note.case = case
-        note.case_notes = case_notes
+        note.case_note = case_note
         note.user_id = user_id
 
         # Commit change to db
