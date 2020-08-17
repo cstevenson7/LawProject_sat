@@ -24,6 +24,7 @@
                 {{ form.confirm_pass(class="form-control", placeholder="Confirm Password") }}
             </fieldset>
             <br>
+            <p>Already have an account? <a href="{{ url_for('login') }}">Login Here</a></p>
             {{ form.submit(class="btn btn-success") }}
         </div>
     </form>

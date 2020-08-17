@@ -1,5 +1,5 @@
 from nza_2 import app, db, Message, mail
-from flask import render_template, request, redirect, url_for
+from flask import render_template, flash, request, redirect, url_for
 from nza_2.forms import UserInfoForm, NoteForm, LoginForm
 from nza_2.models import User, Note, check_password_hash
 from flask_login import login_required, login_user, current_user, logout_user
@@ -121,8 +121,9 @@ def login():
             login_user(logged_user)
             return redirect(url_for('home'))
         else:
-            return redirect(url_for('login'))
+            flash('Either unregistered email address or incorrect password.')
     return render_template('login.html', form=form)
+
 
 @app.route('/logout')
 def logout():

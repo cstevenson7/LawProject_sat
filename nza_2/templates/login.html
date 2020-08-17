@@ -8,6 +8,9 @@
             <div>
                 {{ form.hidden_tag() }}
                 <fieldset>
+                {% for message in get_flashed_messages() %}
+                    <p class="alert alert-danger alert-dismissible fade show">{{ message }}</p>
+                {% endfor %}
                 {{ form.email.label }}
                 {{ form.email(class="form-control", placeholder="Email") }}
                 </fieldset>
@@ -16,6 +19,7 @@
                 {{ form.password(class="form-control", placeholder="Password") }}
                 </fieldset>
                 <br>
+                <p>New User? <a href="{{ url_for('register') }}">Create a New Account!</a></p>
                 {{ form.submit(class="btn btn-primary") }}
             </div>
         </form>
